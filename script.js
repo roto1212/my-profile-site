@@ -4,17 +4,17 @@
 (function () {
     "use strict";
 
-    var prefersReducedMotion = window.matchMedia(
+    const prefersReducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
     ).matches;
 
     /* ---------- live tenure stats ---------- */
-    var CAREER_START = new Date(2021, 1, 1); // 2021-02, 웹비즈크리에이티브 입사
-    var CURRENT_START = new Date(2022, 2, 19); // 2022-03-19, YBM넷 입사(전 회사 퇴사일 기준, 공백 거의 없음)
+    const CAREER_START = new Date(2021, 1, 1); // 2021-02, 웹비즈크리에이티브 입사
+    const CURRENT_START = new Date(2022, 2, 19); // 2022-03-19, YBM넷 입사(전 회사 퇴사일 기준, 공백 거의 없음)
 
     function formatTenure(start, end) {
-        var years = end.getFullYear() - start.getFullYear();
-        var months = end.getMonth() - start.getMonth();
+        let years = end.getFullYear() - start.getFullYear();
+        let months = end.getMonth() - start.getMonth();
         if (end.getDate() < start.getDate()) months -= 1;
         if (months < 0) {
             years -= 1;
@@ -24,19 +24,19 @@
     }
 
     function renderTenure() {
-        var now = new Date();
-        var totalEl = document.getElementById("stat-total");
-        var currentEl = document.getElementById("stat-current");
+        const now = new Date();
+        const totalEl = document.getElementById("stat-total");
+        const currentEl = document.getElementById("stat-current");
         if (totalEl) totalEl.textContent = formatTenure(CAREER_START, now);
         if (currentEl) currentEl.textContent = formatTenure(CURRENT_START, now);
     }
 
     /* ---------- build date footer ---------- */
     function renderBuildDate() {
-        var el = document.getElementById("build-date");
+        const el = document.getElementById("build-date");
         if (!el) return;
-        var today = new Date();
-        var pad = function (n) {
+        const today = new Date();
+        const pad = function (n) {
             return String(n).padStart(2, "0");
         };
         el.textContent =
@@ -49,13 +49,13 @@
 
     /* ---------- copy email to clipboard ---------- */
     function initCopyButton() {
-        var btn = document.getElementById("copy-btn");
-        var email = document.getElementById("email");
-        var feedback = document.getElementById("copy-feedback");
+        const btn = document.getElementById("copy-btn");
+        const email = document.getElementById("email");
+        const feedback = document.getElementById("copy-feedback");
         if (!btn || !email) return;
 
         btn.addEventListener("click", function () {
-            var text = email.textContent.trim();
+            const text = email.textContent.trim();
 
             function showCopied() {
                 btn.textContent = "copied";
@@ -75,9 +75,9 @@
                                 "복사에 실패했습니다. 직접 선택해 복사해주세요.";
                     });
             } else {
-                var range = document.createRange();
+                const range = document.createRange();
                 range.selectNode(email);
-                var selection = window.getSelection();
+                const selection = window.getSelection();
                 selection.removeAllRanges();
                 selection.addRange(range);
                 try {
@@ -95,13 +95,13 @@
 
     /* ---------- expandable project STAR panels ---------- */
     function initRepoToggles() {
-        var toggles = document.querySelectorAll(".repo-toggle");
+        const toggles = document.querySelectorAll(".repo-toggle");
         toggles.forEach(function (btn) {
             btn.addEventListener("click", function () {
-                var panelId = btn.getAttribute("aria-controls");
-                var panel = document.getElementById(panelId);
+                const panelId = btn.getAttribute("aria-controls");
+                const panel = document.getElementById(panelId);
                 if (!panel) return;
-                var expanded = btn.getAttribute("aria-expanded") === "true";
+                const expanded = btn.getAttribute("aria-expanded") === "true";
                 btn.setAttribute("aria-expanded", String(!expanded));
                 panel.hidden = expanded;
             });
@@ -110,7 +110,7 @@
 
     /* ---------- scroll reveal ---------- */
     function initScrollReveal() {
-        var targets = document.querySelectorAll(".log-entry, .repo-card");
+        const targets = document.querySelectorAll(".log-entry, .repo-card");
 
         if (prefersReducedMotion || !("IntersectionObserver" in window)) {
             targets.forEach(function (el) {
@@ -119,7 +119,7 @@
             return;
         }
 
-        var observer = new IntersectionObserver(
+        const observer = new IntersectionObserver(
             function (entries) {
                 entries.forEach(function (entry) {
                     if (entry.isIntersecting) {
@@ -138,13 +138,13 @@
 
     /* ---------- accessible anchor focus on nav click ---------- */
     function initAnchorFocus() {
-        var links = document.querySelectorAll(
+        const links = document.querySelectorAll(
             '.toplinks a[href^="#"], .brand[href^="#"]',
         );
         links.forEach(function (link) {
             link.addEventListener("click", function () {
-                var id = link.getAttribute("href").slice(1);
-                var target = document.getElementById(id);
+                const id = link.getAttribute("href").slice(1);
+                const target = document.getElementById(id);
                 if (!target) return;
                 target.setAttribute("tabindex", "-1");
                 window.setTimeout(
