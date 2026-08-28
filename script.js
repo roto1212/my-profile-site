@@ -10,7 +10,7 @@
 
     /* ---------- live tenure stats ---------- */
     var CAREER_START = new Date(2021, 1, 1); // 2021-02, 웹비즈크리에이티브 입사
-    var CURRENT_START = new Date(2022, 2, 19); // 2022-03-19, 현재 회사 입사(전 회사 퇴사일 기준, 공백 거의 없음)
+    var CURRENT_START = new Date(2022, 2, 19); // 2022-03-19, YBM넷 입사(전 회사 퇴사일 기준, 공백 거의 없음)
 
     function formatTenure(start, end) {
         var years = end.getFullYear() - start.getFullYear();

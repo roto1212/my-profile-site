@@ -146,6 +146,54 @@
                                 >사이트 전 영역 푸시 통합 함수 구현</span
                             >
                         </li>
+                        <li class="diff-row add">
+                            <span class="marker" aria-hidden="true">+</span>
+                            <span class="name"
+                                >JWT 인증<span class="sr-only"
+                                    >(신규 습득)</span
+                                ></span
+                            >
+                            <span class="bars" aria-hidden="true">▮▮▯</span>
+                            <span class="note"
+                                >회원가입 · 로그인 + 인증 의존성 기반 권한 체크</span
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="diff-block">
+                    <p class="diff-hunk">@@ payments / external api @@</p>
+                    <ul class="diff-list">
+                        <li class="diff-row add">
+                            <span class="marker" aria-hidden="true">+</span>
+                            <span class="name"
+                                >Stripe<span class="sr-only"
+                                    >(신규 습득)</span
+                                ></span
+                            >
+                            <span class="bars" aria-hidden="true">▮▮▯</span>
+                            <span class="note">미국 카드 결제 연동</span>
+                        </li>
+                        <li class="diff-row add">
+                            <span class="marker" aria-hidden="true">+</span>
+                            <span class="name"
+                                >Avalara<span class="sr-only"
+                                    >(신규 습득)</span
+                                ></span
+                            >
+                            <span class="bars" aria-hidden="true">▮▮▯</span>
+                            <span class="note">주 · 카운티별 판매세 자동계산 연동</span>
+                        </li>
+                        <li class="diff-row add">
+                            <span class="marker" aria-hidden="true">+</span>
+                            <span class="name"
+                                >Shippo<span class="sr-only"
+                                    >(신규 습득)</span
+                                ></span
+                            >
+                            <span class="bars" aria-hidden="true">▮▮▯</span>
+                            <span class="note">국제 배송 라벨 · 운임 연동</span>
+                        </li>
                     </ul>
                 </div>
 
@@ -356,17 +404,33 @@
                     </li>
                     <li class="log-entry">
                         <div class="log-head">
+                            <span class="ver">v2.1.0</span>
+                            <span class="tag tag-done">released</span>
+                            <time datetime="2025-05">2025.05 – 2026.05</time>
+                        </div>
+                        <p class="log-title">
+                            원아관리 플랫폼 — 유지보수 · 폐쇄몰(pine square) 확장
+                        </p>
+                        <p class="log-body">
+                            메인 플랫폼 유지보수와 병행해 폐쇄몰(pine square)을
+                            재고~반품/교환까지 FE·BE·DB 단독 신규 구축(부분반품
+                            · 부분교환 · 세트상품 부분교환까지 처리), 입학
+                            서류 · 추가 서류 관리 기능도 확장. 2025.01–2026.05
+                            처리 매출 약 12억원.
+                        </p>
+                    </li>
+                    <li class="log-entry">
+                        <div class="log-head">
                             <span class="ver">v2.0.0</span>
                             <span class="tag tag-done">released</span>
                             <time datetime="2023-04">2023.04 – 2025.05</time>
                         </div>
                         <p class="log-title">
-                            원아관리 플랫폼 — 공통 모듈화 · 폐쇄몰 커머스
+                            원아관리 플랫폼 — 메인 개발 · 공통 모듈화
                         </p>
                         <p class="log-body">
-                            파일 업로드 · 푸시 알림을 단일 모듈로 통합.
-                            재고~반품/교환까지 커머스 전 흐름을 FE·BE·DB 단독
-                            구축, 부분반품·부분교환·세트상품 부분교환까지 처리.
+                            파일 업로드 · 푸시 알림을 단일 모듈로 통합한 메인
+                            플랫폼 개발. 첫 커밋 2023-04-27.
                         </p>
                     </li>
                     <li class="log-entry">
@@ -375,7 +439,7 @@
                             <span class="tag tag-done">released</span>
                             <time datetime="2022-03">2022.03 – 2023.04</time>
                         </div>
-                        <p class="log-title">현재 회사 온보딩</p>
+                        <p class="log-title">YBM넷 온보딩</p>
                         <p class="log-body">
                             ybm pine GT 결제/예약 페이지, ybm academy 자바→PHP
                             마이그레이션, ybm books VOCA 출제 마법사 작업.
@@ -390,6 +454,8 @@
                         <p class="log-title">웹비즈크리에이티브</p>
                         <p class="log-body">
                             PHP · Vanilla JS 중심 SI 개발로 커리어 시작.
+                            워커몬(구인구직 플랫폼) · 뷰티존(미국 현지 입점몰)
+                            등 다수 프로젝트를 메인 개발자로 수행.
                         </p>
                     </li>
                 </ol>
@@ -427,7 +493,7 @@
                                 <span class="tech">MSSQL</span>
                                 <span class="tech">Firebase FCM</span>
                                 <span class="tech">Quill</span>
-                                <span class="period">2023.04 – 2025.05</span>
+                                <span class="period">2023.04 – 2026.05</span>
                             </div>
                             <span class="expand-hint"
                                 >STAR 상세 보기
@@ -470,9 +536,12 @@
                                 <dt>R</dt>
                                 <dd>
                                     알림·업로드를 단일 경로로 일원화해 중복
-                                    제거. 폐쇄몰 커머스를 단독으로 FE·BE·DB까지
-                                    오픈, 약 2년간 대부분 기능을 단독 구현·운영.
-                                    2025.01–2026.05 처리 매출 약 12억원.
+                                    제거. 폐쇄몰 커머스(pine square)를 단독으로
+                                    FE·BE·DB까지 오픈, 약 3년간(메인 개발
+                                    2023.04–2025.05 + 유지보수·확장
+                                    2025.05–2026.05) 대부분 기능을 단독
+                                    구현·운영. 2025.01–2026.05 처리 매출 약
+                                    12억원.
                                 </dd>
                             </dl>
                         </div>
@@ -489,7 +558,7 @@
                                 <span class="repo-name"
                                     >jumpto-fastapi-paibo</span
                                 >
-                                <span class="badge badge-active">active</span>
+                                <span class="badge badge-done">done</span>
                             </div>
                             <p class="repo-desc">
                                 점프 투 FastAPI 튜토리얼 — Q&amp;A
@@ -500,9 +569,10 @@
                                 <span class="tech">SQLAlchemy</span>
                                 <span class="tech">Alembic</span>
                                 <span class="tech">Pydantic</span>
+                                <span class="tech">JWT</span>
                                 <span class="tech">Svelte</span>
                                 <span class="tech">SQLite</span>
-                                <span class="period">2026.07 – present</span>
+                                <span class="period">2026.07</span>
                             </div>
                             <span class="expand-hint"
                                 >STAR 상세 보기
@@ -533,19 +603,21 @@
                                 </dd>
                                 <dt>A</dt>
                                 <dd>
-                                    도메인 단위(question/answer)로
+                                    도메인 단위(question/answer/user)로
                                     라우터·Pydantic 스키마·CRUD를 3계층 분리.
                                     SQLAlchemy+Alembic으로 테이블·FK 구성,
-                                    relationship으로 답변 중첩 직렬화. Pydantic
-                                    field_validator 서버단 검증을 Svelte 공용
-                                    에러 컴포넌트와 연결.
+                                    relationship으로 답변 중첩 직렬화. JWT
+                                    회원가입·로그인과 권한 체크, 추천·마크다운
+                                    렌더링·검색을 구현하고 Svelte 정적 빌드를
+                                    FastAPI가 직접 서빙하도록 구성.
                                 </dd>
                                 <dt>R</dt>
                                 <dd>
-                                    FastAPI 백엔드와 Svelte 프론트가 맞물려
-                                    동작하는 미니 게시판을 엔드투엔드로 완성.
-                                    실무 R&amp;D 프로젝트에 바로 옮길 수 있는
-                                    패턴 확보.
+                                    FastAPI 백엔드(인증·권한 포함)와 Svelte
+                                    프론트가 맞물려 동작하는 게시판을
+                                    엔드투엔드로 완성, 튜토리얼 1~4장을 3일 만에
+                                    완주. 실무 R&amp;D 프로젝트에 바로 옮길 수
+                                    있는 패턴 확보.
                                 </dd>
                             </dl>
                         </div>
@@ -615,6 +687,149 @@
                                     일지 → 포트폴리오 → 경력기술서가 단일
                                     출처(Dataview)로 연결돼 이중 관리 제거.
                                     작업일지 작성 시간을 수작업 대비 대폭 단축.
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="repo-card">
+                        <button
+                            class="repo-toggle"
+                            aria-expanded="false"
+                            aria-controls="star-4"
+                            id="toggle-4"
+                        >
+                            <div class="repo-top">
+                                <span class="repo-name"
+                                    >workermon-job-platform</span
+                                >
+                                <span class="badge badge-done">done</span>
+                            </div>
+                            <p class="repo-desc">
+                                워커몬 — 일용직 구인구직 · 근로계약 · 근태관리
+                                플랫폼 신규 구축 (메인 개발자)
+                            </p>
+                            <div class="repo-meta">
+                                <span class="tech">PHP</span>
+                                <span class="tech">Vanilla JS</span>
+                                <span class="tech">jQuery</span>
+                                <span class="tech">MySQL</span>
+                                <span class="period">2021.08 – 2021.11</span>
+                            </div>
+                            <span class="expand-hint"
+                                >STAR 상세 보기
+                                <span class="chev" aria-hidden="true"
+                                    >›</span
+                                ></span
+                            >
+                        </button>
+                        <div
+                            class="repo-star"
+                            id="star-4"
+                            role="region"
+                            aria-labelledby="toggle-4"
+                            hidden
+                        >
+                            <dl>
+                                <dt>S</dt>
+                                <dd>
+                                    클라이언트가 일용직 구인구직 시장을 겨냥한
+                                    신규 플랫폼을 의뢰. 매칭·근로계약·근태
+                                    기록이 분리된 수기·개별 도구로 처리되고
+                                    있었다.
+                                </dd>
+                                <dt>T</dt>
+                                <dd>
+                                    메인 개발자로서 구인공고 등록·매칭부터
+                                    근로계약 체결, 근태 기록까지 하나의
+                                    플랫폼에서 처리되도록 신규 구축한다.
+                                </dd>
+                                <dt>A</dt>
+                                <dd>
+                                    화면 기획·요구사항 분석부터 PHP+MySQL
+                                    백엔드, Vanilla JS+jQuery+Ajax 프론트까지
+                                    메인 개발자로 설계·구현. 구인공고
+                                    등록/검색, 지원·매칭, 근로계약서
+                                    작성·체결, 출퇴근 기반 근태관리 기능을
+                                    구현.
+                                </dd>
+                                <dt>R</dt>
+                                <dd>
+                                    약 3.5개월 만에 신규 플랫폼을 오픈해
+                                    클라이언트에 납품 완료.
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="repo-card">
+                        <button
+                            class="repo-toggle"
+                            aria-expanded="false"
+                            aria-controls="star-5"
+                            id="toggle-5"
+                        >
+                            <div class="repo-top">
+                                <span class="repo-name"
+                                    >beautyzone-us-marketplace</span
+                                >
+                                <span class="badge badge-done">done</span>
+                            </div>
+                            <p class="repo-desc">
+                                뷰티존 — 미국 현지 입점몰, 해외 결제·세금·배송
+                                API 연동 (메인 개발자)
+                            </p>
+                            <div class="repo-meta">
+                                <span class="tech">PHP</span>
+                                <span class="tech">Vanilla JS</span>
+                                <span class="tech">MySQL</span>
+                                <span class="tech">Stripe</span>
+                                <span class="tech">Avalara</span>
+                                <span class="tech">Shippo</span>
+                                <span class="period">2021.11 – 2022.03</span>
+                            </div>
+                            <span class="expand-hint"
+                                >STAR 상세 보기
+                                <span class="chev" aria-hidden="true"
+                                    >›</span
+                                ></span
+                            >
+                        </button>
+                        <div
+                            class="repo-star"
+                            id="star-5"
+                            role="region"
+                            aria-labelledby="toggle-5"
+                            hidden
+                        >
+                            <dl>
+                                <dt>S</dt>
+                                <dd>
+                                    클라이언트가 미국 현지에서 운영될 멀티벤더
+                                    입점몰을 의뢰. 국내 커머스와 달리 미국
+                                    카드결제, 주/카운티별 판매세, 국제 배송까지
+                                    함께 처리해야 했다.
+                                </dd>
+                                <dt>T</dt>
+                                <dd>
+                                    메인 개발자로서 상품 등록/판매, 입찰 판매,
+                                    셀러 관리, 미국 전용 결제·세금·배송
+                                    처리를 하나의 플랫폼으로 신규 구축한다.
+                                </dd>
+                                <dt>A</dt>
+                                <dd>
+                                    PHP+MySQL 백엔드, Vanilla JS 프론트로
+                                    입점몰 전체 흐름을 메인 개발자로 구현.
+                                    Stripe로 미국 카드결제, Avalara로
+                                    주/카운티별 판매세 자동계산, Shippo로 배송
+                                    라벨·운임을 연동. 셀러 정산·포인트·기프트카드·쿠폰
+                                    로직을 구현.
+                                </dd>
+                                <dt>R</dt>
+                                <dd>
+                                    재직 기간 동안 입점몰 플랫폼 핵심 기능(판매,
+                                    셀러 관리, 결제·세금·배송 연동, 정산)을
+                                    메인 개발자로 구축 완료.
                                 </dd>
                             </dl>
                         </div>
