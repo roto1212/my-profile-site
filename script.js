@@ -138,6 +138,74 @@
         });
     }
 
+    /* ---------- highlight nav link for section in view ---------- */
+    function initScrollSpy() {
+        const sectionIds = ["skills", "career", "projects", "contact"];
+        const links = {};
+        sectionIds.forEach(function (id) {
+            const link = document.querySelector('.toplinks a[href="#' + id + '"]');
+            if (link) links[id] = link;
+        });
+        const sections = sectionIds
+            .map(function (id) {
+                return document.getElementById(id);
+            })
+            .filter(Boolean);
+        if (!sections.length || !("IntersectionObserver" in window)) return;
+
+        function setActive(id) {
+            sectionIds.forEach(function (sid) {
+                const link = links[sid];
+                if (!link) return;
+                if (sid === id) {
+                    link.classList.add("active");
+                    link.setAttribute("aria-current", "true");
+                } else {
+                    link.classList.remove("active");
+                    link.removeAttribute("aria-current");
+                }
+            });
+        }
+
+        const observer = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        setActive(entry.target.id);
+                    }
+                });
+            },
+            { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
+        );
+
+        sections.forEach(function (el) {
+            observer.observe(el);
+        });
+
+        // the last section (contact) can be shorter than the viewport, so
+        // its own bounds may never cross the mid-page band above — treat
+        // hitting the bottom of the page as "viewing" it explicitly.
+        const lastId = sectionIds[sectionIds.length - 1];
+        let ticking = false;
+        function checkBottom() {
+            ticking = false;
+            const atBottom =
+                window.innerHeight + window.scrollY >=
+                document.documentElement.scrollHeight - 2;
+            if (atBottom) setActive(lastId);
+        }
+        window.addEventListener(
+            "scroll",
+            function () {
+                if (ticking) return;
+                ticking = true;
+                window.requestAnimationFrame(checkBottom);
+            },
+            { passive: true },
+        );
+        checkBottom();
+    }
+
     /* ---------- accessible anchor focus on nav click ---------- */
     function initAnchorFocus() {
         const links = document.querySelectorAll(
@@ -165,6 +233,7 @@
         initCopyButton();
         initRepoToggles();
         initScrollReveal();
+        initScrollSpy();
         initAnchorFocus();
     });
 })();

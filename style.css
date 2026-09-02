@@ -178,6 +178,10 @@ button {
 .toplinks a:hover {
     color: var(--add);
 }
+.toplinks a.active {
+    color: var(--add);
+    font-weight: 700;
+}
 
 .status-pill {
     display: inline-flex;
@@ -761,10 +765,7 @@ footer.contact {
 .contact-row code {
     font-family: var(--mono);
     font-size: 1rem;
-    background: var(--paper-raised);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 0.45rem 0.75rem;
+    color: var(--ink-soft);
 }
 #copy-btn {
     font-family: var(--mono);
