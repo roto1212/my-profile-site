@@ -59,6 +59,10 @@ html {
         animation-iteration-count: 1 !important;
         transition-duration: 0.001ms !important;
     }
+    .log-entry {
+        opacity: 1 !important;
+        transform: none !important;
+    }
 }
 
 body {
@@ -306,7 +310,8 @@ footer.contact {
 }
 
 /* ---------- skills diff ---------- */
-.diff-legend {
+.diff-legend,
+.log-legend {
     margin-top: 1.4rem;
     display: flex;
     flex-wrap: wrap;
@@ -314,6 +319,14 @@ footer.contact {
     font-family: var(--sans);
     font-size: 0.78rem;
     color: var(--ink-soft);
+}
+.log-legend {
+    align-items: center;
+}
+.log-legend .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 .legend-item .marker {
     display: inline-block;
@@ -393,23 +406,78 @@ footer.contact {
     font-size: 0.82rem;
     color: var(--ink-soft);
 }
+.diff-row .courses {
+    grid-column: 2 / -1;
+    list-style: none;
+    margin: 0.35rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    color: var(--muted);
+}
+.diff-row .courses a {
+    color: var(--rc);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.diff-row .courses a:hover {
+    color: var(--ink);
+}
 
 /* ---------- changelog ---------- */
+.log-schema {
+    margin-top: 1.4rem;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 0.5rem 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+.hmark {
+    display: inline-block;
+    width: 14px;
+    border-radius: 1px;
+    vertical-align: middle;
+}
+.hmark-major {
+    height: 4px;
+    background: var(--legacy);
+}
+.hmark-minor {
+    height: 2px;
+    background: var(--muted);
+}
+.hmark-patch {
+    height: 1px;
+    background: var(--line);
+}
+
 .log-list {
-    margin-top: 2rem;
+    --log-gutter: 1.4rem;
+    --log-mark-w: 14px;
+    --log-mark-h: 2px;
+    --log-mark-color: var(--muted);
+    margin-top: 1.8rem;
     position: relative;
-    padding-left: 1.4rem;
+    padding-left: var(--log-gutter);
     border-left: 1px solid var(--line);
 }
 
 .log-entry {
     position: relative;
-    padding-bottom: 2.2rem;
+    padding-bottom: 2rem;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(6px);
     transition:
-        opacity 0.5s ease,
-        transform 0.5s ease;
+        opacity 0.35s ease,
+        transform 0.35s ease;
 }
 .log-entry.in-view {
     opacity: 1;
@@ -418,23 +486,84 @@ footer.contact {
 .log-entry::before {
     content: "";
     position: absolute;
-    left: -1.51rem;
-    top: 0.35rem;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--muted);
-    border: 2px solid var(--paper);
-    box-shadow: 0 0 0 1px var(--line);
-}
-.log-entry.current::before {
-    background: var(--rc);
-    box-shadow:
-        0 0 0 1px var(--line),
-        0 0 0 4px var(--rc-bg);
+    left: calc(-1 * var(--log-gutter) + 0.5px);
+    top: 0.65rem;
+    width: var(--log-mark-w);
+    height: var(--log-mark-h);
+    background: var(--log-mark-color);
+    border-radius: 1px;
+    transform: translate(-50%, -50%);
 }
 .log-entry:last-child {
     padding-bottom: 0;
+}
+
+/* major: org boundary — thickest, colored mark */
+.log-major {
+    --log-mark-h: 4px;
+    --log-mark-color: var(--legacy);
+    padding-bottom: 2.6rem;
+}
+.log-major::after {
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--log-gutter));
+    right: 0;
+    bottom: 0.9rem;
+    border-top: 1px dashed var(--line);
+}
+.log-major:last-child::after {
+    display: none;
+}
+.log-major .ver {
+    font-size: 1.05rem;
+}
+.log-major .log-title {
+    font-size: 1.2rem;
+}
+
+/* minor: medium-weight, achromatic mark */
+.log-minor {
+    --log-mark-h: 2px;
+    --log-mark-color: var(--muted);
+}
+
+/* patch: thinnest mark, compact single-line, excluded from scroll reveal */
+.log-patch {
+    --log-mark-h: 1px;
+    --log-mark-color: var(--line);
+    padding-bottom: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 0.6rem;
+    row-gap: 0.1rem;
+    opacity: 1;
+    transform: none;
+    transition: none;
+}
+.log-patch .ver {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+}
+.log-patch .log-title {
+    margin: 0;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.log-note {
+    margin-bottom: 0.4rem;
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--legacy);
+    background: var(--legacy-bg);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius);
+}
+.ver-hi {
+    color: var(--legacy);
 }
 
 .log-head {
@@ -470,9 +599,13 @@ footer.contact {
     color: var(--add);
     background: var(--add-bg);
 }
+.tag-planned {
+    color: var(--legacy);
+    background: var(--legacy-bg);
+}
 
 .log-title {
-    margin-top: 0.55rem;
+    margin: 0.55rem 0 0;
     font-weight: 700;
     font-size: 1.05rem;
 }
@@ -698,10 +831,45 @@ footer.contact {
     .diff-row .note {
         grid-column: 2;
     }
+    .diff-row .courses {
+        grid-column: 2;
+    }
 
     .period {
         margin-left: 0;
         width: 100%;
+    }
+
+    .log-list {
+        --log-gutter: 1.1rem;
+    }
+    .log-head {
+        gap: 0.4rem 0.6rem;
+    }
+    .log-head time {
+        flex-basis: 100%;
+    }
+    .log-patch {
+        column-gap: 0.5rem;
+        padding-bottom: 0.7rem;
+    }
+    .log-major {
+        padding-bottom: 2rem;
+    }
+    .log-minor {
+        padding-bottom: 1.6rem;
+    }
+    .log-major .log-title {
+        font-size: 1.08rem;
+    }
+    .log-body {
+        font-size: 0.88rem;
+    }
+    .log-schema {
+        font-size: 0.72rem;
+    }
+    .log-legend {
+        gap: 0.7rem 1rem;
     }
 }
 

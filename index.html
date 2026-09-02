@@ -208,7 +208,11 @@
                                 ></span
                             >
                             <span class="bars" aria-hidden="true">▮▮▮</span>
-                            <span class="note">SI 5년</span>
+                            <span class="note"
+                                >SI 5년 주력 · SPA 프레임워크가 추상화하는 DOM
+                                로직을 먼저 체득하려는 선택 · 필요시 jQuery도
+                                사용</span
+                            >
                         </li>
                         <li class="diff-row ctx">
                             <span class="marker" aria-hidden="true"> </span>
@@ -251,6 +255,49 @@
                             <span class="note"
                                 >튜토리얼 실습으로 SPA 라우팅 학습</span
                             >
+                        </li>
+                        <li class="diff-row rc">
+                            <span class="marker" aria-hidden="true">~</span>
+                            <span class="name"
+                                >React · Next.js<span class="sr-only"
+                                    >(학습 중)</span
+                                ></span
+                            >
+                            <span class="bars" aria-hidden="true">▮▯▯</span>
+                            <span class="note"
+                                >인프런 등 학습 사이트로 꾸준히 학습 · 실무
+                                사용 경험 없음(현 직장 미사용)</span
+                            >
+                            <ul class="courses">
+                                <li>
+                                    드림코딩 — Next.js 개념정리 및 클론코딩
+                                    <a
+                                        href="https://academy.dream-coding.com/certificate?id=db0d5d71-1d6c-4d8c-bee8-30b9928b3e88&amp;course=next"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >(수료증)</a
+                                    >
+                                </li>
+                                <li>
+                                    인프런 — 실무중심! FE 입문자를 위한 React
+                                    <a
+                                        href="https://www.inflearn.com/certificate/1324971-331070-13903990"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >(수료증)</a
+                                    >
+                                </li>
+                                <li>
+                                    인프런 — [풀스택 완성] Supabase로 웹사이트
+                                    3개를 클론하기(Next.js 14)
+                                    <a
+                                        href="https://www.inflearn.com/certificate/1324971-332907-13903991"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >(수료증)</a
+                                    >
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -382,80 +429,393 @@
                     >
                 </h2>
                 <p class="section-desc">
-                    총 경력 약 5년 4개월(2021-02~). 전 회사 퇴사와 현 회사 입사
-                    사이 공백은 거의 없었습니다.
+                    소속 조직 · 프로젝트 단위로 버전을 매긴 경력 로그입니다.
+                    경력 집계는 2021-02 첫 입사부터이며, v0.1.0 국비과정은
+                    경력에 포함하지 않았습니다. 일부 소규모 프로젝트는 기간
+                    기록이 남아있지 않아 제목만 표기했습니다.
                 </p>
 
-                <ol class="log-list">
-                    <li class="log-entry current">
+                <p class="log-schema">
+                    v&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt; = 소속 조직 ·
+                    큰 프로젝트 · 작은 프로젝트
+                </p>
+
+                <p class="log-legend">
+                    <span class="legend-item"
+                        ><span class="hmark hmark-major" aria-hidden="true"></span
+                        >메이저 · 소속 조직</span
+                    >
+                    <span class="legend-item"
+                        ><span class="hmark hmark-minor" aria-hidden="true"></span
+                        >마이너 · 큰 프로젝트</span
+                    >
+                    <span class="legend-item"
+                        ><span class="hmark hmark-patch" aria-hidden="true"></span
+                        >패치 · 작은 프로젝트</span
+                    >
+                </p>
+                <p class="log-legend">
+                    <span class="legend-item"
+                        ><span class="tag tag-done">released</span>완료된
+                        릴리스</span
+                    >
+                    <span class="legend-item"
+                        ><span class="tag tag-rc">in progress</span>진행
+                        중</span
+                    >
+                    <span class="legend-item"
+                        ><span class="tag tag-planned">planned</span>예정</span
+                    >
+                </p>
+
+                <ol
+                    class="log-list"
+                    reversed
+                    aria-label="경력 변경 이력(최신순)"
+                >
+                    <li class="log-entry log-minor">
                         <div class="log-head">
-                            <span class="ver">v3.0.0-rc.1</span>
-                            <span class="tag tag-rc">in progress</span>
-                            <time datetime="2026-05">2026.05 – 현재</time>
+                            <span class="sr-only"
+                                >마이너 릴리스, 큰 프로젝트.</span
+                            >
+                            <span class="ver">v2.13.0</span>
+                            <span class="tag tag-planned">planned</span>
+                            <time datetime="2026-08">2026.08 – 현재</time>
                         </div>
-                        <p class="log-title">
-                            R&amp;D 팀 합류 — AX(AI 기능 부착) 전환
-                        </p>
+                        <h3 class="log-title">
+                            OWUI RAG 지식베이스 — 설계 · 리서치
+                        </h3>
                         <p class="log-body">
-                            Python(FastAPI) + Vue.js로 기존 서비스에 AI 기능을
-                            붙이는 feature 단위 개발. 아직 스택 전환이 진행
-                            중이라 release candidate.
+                            사내 지식베이스 검색-증강 생성(RAG) 구조 설계를
+                            검토하는 단계.
                         </p>
                     </li>
-                    <li class="log-entry">
+                    <li class="log-entry log-minor">
                         <div class="log-head">
-                            <span class="ver">v2.1.0</span>
+                            <span class="sr-only"
+                                >마이너 릴리스, 큰 프로젝트.</span
+                            >
+                            <span class="ver">v2.12.0</span>
+                            <span class="tag tag-done">released</span>
+                            <time datetime="2026-08">2026.08</time>
+                        </div>
+                        <h3 class="log-title">
+                            admin-ui — 챗봇 관리자 페이지 신규 구축
+                        </h3>
+                        <p class="log-body">
+                            shadcn-svelte 디자인 시스템으로 전환, DataTable ·
+                            FilterBar 공용화, vitest + Playwright 테스트
+                            인프라 도입까지 단독 개발.
+                        </p>
+                    </li>
+                    <li class="log-entry log-patch">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >패치 릴리스, 작은 프로젝트.</span
+                            >
+                            <span class="ver">v2.11.4</span>
+                            <span class="tag tag-done">released</span>
+                            <time datetime="2026-07">2026.07 – 2026.08</time>
+                        </div>
+                        <h3 class="log-title">
+                            계열사 로그인 게이트 — 인증 구조 개선
+                        </h3>
+                    </li>
+                    <li class="log-entry log-patch">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >패치 릴리스, 작은 프로젝트.</span
+                            >
+                            <span class="ver">v2.11.3</span>
+                            <span class="tag tag-done">released</span>
+                            <time datetime="2026-07">2026.07</time>
+                        </div>
+                        <h3 class="log-title">
+                            ai-tool-control 통합 · Alembic 스키마 이력관리
+                            도입
+                        </h3>
+                    </li>
+                    <li class="log-entry log-patch">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >패치 릴리스, 작은 프로젝트.</span
+                            >
+                            <span class="ver">v2.11.2</span>
+                            <span class="tag tag-done">released</span>
+                            <time datetime="2026-06">2026.06</time>
+                        </div>
+                        <h3 class="log-title">
+                            ESLint · Prettier 공유 설정 패키지
+                        </h3>
+                    </li>
+                    <li class="log-entry log-patch">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >패치 릴리스, 작은 프로젝트.</span
+                            >
+                            <span class="ver">v2.11.1</span>
+                            <span class="tag tag-done">released</span>
+                            <time datetime="2026-06">2026.06 – 2026.07</time>
+                        </div>
+                        <h3 class="log-title">
+                            ybm-dlp — 개인정보 비식별 필터 모듈
+                        </h3>
+                    </li>
+                    <li class="log-entry log-minor">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >마이너 릴리스, 큰 프로젝트.</span
+                            >
+                            <span class="ver">v2.11.0</span>
+                            <span class="tag tag-rc">in progress</span>
+                            <time datetime="2026-06">2026.06 – 현재</time>
+                        </div>
+                        <h3 class="log-title">
+                            사내 AI 챗봇(Open WebUI) 구축 · 운영
+                        </h3>
+                        <p class="log-body">
+                            Python(FastAPI) 기반 사내 LLM 챗봇 플랫폼을 주
+                            담당으로 구축 · 운영 중.
+                        </p>
+                    </li>
+                    <li class="log-entry log-minor">
+                        <p class="log-note">
+                            <span aria-hidden="true">#</span> minor 자릿수
+                            점프 — 개발팀 → IT RnD팀 이동
+                        </p>
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >마이너 릴리스, 큰 프로젝트. 팀 이동으로 자릿수
+                                점프.</span
+                            >
+                            <span class="ver"
+                                >v2.<span class="ver-hi">10</span>.0</span
+                            >
+                            <span class="tag tag-done">released</span>
+                            <time datetime="2026-05">2026.05 – 현재</time>
+                        </div>
+                        <h3 class="log-title">IT RnD팀 합류 — AX 전환</h3>
+                        <p class="log-body">
+                            개발팀에서 IT RnD팀으로 이동, Python(FastAPI) +
+                            Vue.js/Svelte 기반 AX(AI 기능 부착) 개발로 전환.
+                        </p>
+                    </li>
+                    <li class="log-entry log-patch">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >패치 릴리스, 작은 프로젝트.</span
+                            >
+                            <span class="ver">v2.2.1</span>
+                            <span class="tag tag-done">released</span>
+                        </div>
+                        <h3 class="log-title">
+                            입학원서 등 서류 버전관리 기능 확장
+                        </h3>
+                    </li>
+                    <li class="log-entry log-minor">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >마이너 릴리스, 큰 프로젝트.</span
+                            >
+                            <span class="ver">v2.2.0</span>
                             <span class="tag tag-done">released</span>
                             <time datetime="2025-05">2025.05 – 2026.05</time>
                         </div>
-                        <p class="log-title">
-                            원아관리 플랫폼 — 유지보수 · 폐쇄몰(pine square) 확장
-                        </p>
+                        <h3 class="log-title">
+                            폐쇄몰 pine square — 재고~반품/교환 신규 구축
+                        </h3>
                         <p class="log-body">
-                            메인 플랫폼 유지보수와 병행해 폐쇄몰(pine square)을
-                            재고~반품/교환까지 FE·BE·DB 단독 신규 구축(부분반품
-                            · 부분교환 · 세트상품 부분교환까지 처리), 입학
-                            서류 · 추가 서류 관리 기능도 확장. 2025.01–2026.05
-                            처리 매출 약 12억원.
+                            재고 · 발주 · 판매 · 결제 · 반품 · 환불 ·
+                            교환(부분반품 · 부분교환 · 세트상품 부분교환
+                            포함)까지 FE · BE · DB 단독 구축. 처리 매출 약
+                            12억원(2025.01–2026.05).
                         </p>
                     </li>
-                    <li class="log-entry">
+                    <li class="log-entry log-minor">
                         <div class="log-head">
-                            <span class="ver">v2.0.0</span>
+                            <span class="sr-only"
+                                >마이너 릴리스, 큰 프로젝트.</span
+                            >
+                            <span class="ver">v2.1.0</span>
                             <span class="tag tag-done">released</span>
                             <time datetime="2023-04">2023.04 – 2025.05</time>
                         </div>
-                        <p class="log-title">
+                        <h3 class="log-title">
                             원아관리 플랫폼 — 메인 개발 · 공통 모듈화
-                        </p>
+                        </h3>
                         <p class="log-body">
-                            파일 업로드 · 푸시 알림을 단일 모듈로 통합한 메인
-                            플랫폼 개발. 첫 커밋 2023-04-27.
+                            파일 업로드 · 푸시 알림을 단일 모듈로 통합한
+                            SaaS 메인 플랫폼 개발. 첫 커밋 2023-04-27.
                         </p>
                     </li>
-                    <li class="log-entry">
+                    <li class="log-entry log-patch">
                         <div class="log-head">
+                            <span class="sr-only"
+                                >패치 릴리스, 작은 프로젝트.</span
+                            >
+                            <span class="ver">v2.0.3</span>
+                            <span class="tag tag-done">released</span>
+                        </div>
+                        <h3 class="log-title">
+                            ybm books — VOCA 출제 마법사
+                        </h3>
+                    </li>
+                    <li class="log-entry log-patch">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >패치 릴리스, 작은 프로젝트.</span
+                            >
+                            <span class="ver">v2.0.2</span>
+                            <span class="tag tag-done">released</span>
+                        </div>
+                        <h3 class="log-title">
+                            ybm academy — Java → PHP 마이그레이션
+                        </h3>
+                    </li>
+                    <li class="log-entry log-patch">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >패치 릴리스, 작은 프로젝트.</span
+                            >
+                            <span class="ver">v2.0.1</span>
+                            <span class="tag tag-done">released</span>
+                        </div>
+                        <h3 class="log-title">
+                            ybm pine GT — 결제 · 예약 페이지
+                        </h3>
+                    </li>
+                    <li class="log-entry log-major">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >메이저 릴리스, 소속 조직 변경.</span
+                            >
+                            <span class="ver">v2.0.0</span>
+                            <span class="tag tag-done">released</span>
+                            <time datetime="2022-03">2022.03</time>
+                        </div>
+                        <h3 class="log-title">YBM넷 입사 — 웹개발</h3>
+                        <p class="log-body">
+                            전 직장 웹비즈크리에이티브 퇴사 직후 입사, 웹개발
+                            담당으로 시작.
+                        </p>
+                    </li>
+                    <li class="log-entry log-patch">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >패치 릴리스, 작은 프로젝트.</span
+                            >
+                            <span class="ver">v1.2.1</span>
+                            <span class="tag tag-done">released</span>
+                        </div>
+                        <h3 class="log-title">
+                            더부천 · PPI · H-seven · 셀러뷰 — 유지보수 및
+                            게시판 구축
+                        </h3>
+                    </li>
+                    <li class="log-entry log-minor">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >마이너 릴리스, 큰 프로젝트.</span
+                            >
+                            <span class="ver">v1.2.0</span>
+                            <span class="tag tag-done">released</span>
+                            <time datetime="2021-11">2021.11 – 2022.03</time>
+                        </div>
+                        <h3 class="log-title">
+                            뷰티존 — 미국 현지 입점몰
+                        </h3>
+                        <p class="log-body">
+                            메인 개발자로 Stripe 카드결제 · Avalara 판매세 ·
+                            Shippo 배송 API 연동, 셀러 정산 · 포인트 ·
+                            기프트카드 · 쿠폰 로직 구현.
+                        </p>
+                    </li>
+                    <li class="log-entry log-minor">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >마이너 릴리스, 큰 프로젝트.</span
+                            >
+                            <span class="ver">v1.1.0</span>
+                            <span class="tag tag-done">released</span>
+                            <time datetime="2021-08">2021.08 – 2021.11</time>
+                        </div>
+                        <h3 class="log-title">
+                            워커몬 — 구인구직 · 근태관리 플랫폼
+                        </h3>
+                        <p class="log-body">
+                            일용직 구인구직 · 근로계약 · 근태관리 플랫폼을
+                            메인 개발자로 신규 구축.
+                        </p>
+                    </li>
+                    <li class="log-entry log-patch">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >패치 릴리스, 작은 프로젝트.</span
+                            >
+                            <span class="ver">v1.0.3</span>
+                            <span class="tag tag-done">released</span>
+                        </div>
+                        <h3 class="log-title">
+                            공임나라 — 예약 · 커뮤니티 게시판 재작업
+                        </h3>
+                    </li>
+                    <li class="log-entry log-patch">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >패치 릴리스, 작은 프로젝트.</span
+                            >
+                            <span class="ver">v1.0.2</span>
+                            <span class="tag tag-done">released</span>
+                        </div>
+                        <h3 class="log-title">
+                            유토빌 — 아파트 관리사무소 게시판 신규 구축
+                        </h3>
+                    </li>
+                    <li class="log-entry log-patch">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >패치 릴리스, 작은 프로젝트.</span
+                            >
+                            <span class="ver">v1.0.1</span>
+                            <span class="tag tag-done">released</span>
+                        </div>
+                        <h3 class="log-title">
+                            IPTV협회 — Java/Spring 레거시 유지보수
+                        </h3>
+                    </li>
+                    <li class="log-entry log-major">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >메이저 릴리스, 소속 조직 변경.</span
+                            >
                             <span class="ver">v1.0.0</span>
                             <span class="tag tag-done">released</span>
-                            <time datetime="2022-03">2022.03 – 2023.04</time>
+                            <time datetime="2021-02">2021.02</time>
                         </div>
-                        <p class="log-title">YBM넷 온보딩</p>
-                        <p class="log-body">
-                            ybm pine GT 결제/예약 페이지, ybm academy 자바→PHP
-                            마이그레이션, ybm books VOCA 출제 마법사 작업.
-                        </p>
-                    </li>
-                    <li class="log-entry">
-                        <div class="log-head">
-                            <span class="ver">v0.1.0</span>
-                            <span class="tag tag-done">released</span>
-                            <time datetime="2021-02">2021.02 – 2022.03</time>
-                        </div>
-                        <p class="log-title">웹비즈크리에이티브</p>
+                        <h3 class="log-title">
+                            웹비즈크리에이티브 입사 — SI 개발자
+                        </h3>
                         <p class="log-body">
                             PHP · Vanilla JS 중심 SI 개발로 커리어 시작.
-                            워커몬(구인구직 플랫폼) · 뷰티존(미국 현지 입점몰)
-                            등 다수 프로젝트를 메인 개발자로 수행.
+                            Java/Spring 유지보수로 입사해 이후 PHP 개발팀으로
+                            배치.
+                        </p>
+                    </li>
+                    <li class="log-entry log-major">
+                        <div class="log-head">
+                            <span class="sr-only"
+                                >메이저 릴리스, 소속 조직 변경.</span
+                            >
+                            <span class="ver">v0.1.0</span>
+                            <span class="tag tag-done">released</span>
+                            <time datetime="2020-07">2020.07 – 2020.12</time>
+                        </div>
+                        <h3 class="log-title">
+                            코리아IT아카데미 — Java 프레임웍기반 풀스텍
+                            양성C
+                        </h3>
+                        <p class="log-body">
+                            6개월 국비과정으로 Java 풀스택 개발 기초를 다짐.
                         </p>
                     </li>
                 </ol>

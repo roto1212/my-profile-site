@@ -110,7 +110,9 @@
 
     /* ---------- scroll reveal ---------- */
     function initScrollReveal() {
-        const targets = document.querySelectorAll(".log-entry, .repo-card");
+        const targets = document.querySelectorAll(
+            ".log-entry:not(.log-patch), .repo-card",
+        );
 
         if (prefersReducedMotion || !("IntersectionObserver" in window)) {
             targets.forEach(function (el) {
