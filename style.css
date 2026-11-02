@@ -879,3 +879,8 @@ footer.contact {
         display: none;
     }
 }
+
+.period-elapsed {
+    opacity: 0.7;
+    white-space: nowrap;
+}

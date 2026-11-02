@@ -10,7 +10,7 @@
 
     /* ---------- live tenure stats ---------- */
     const CAREER_START = new Date(2021, 1, 1); // 2021-02, 웹비즈크리에이티브 입사
-    const CURRENT_START = new Date(2022, 2, 19); // 2022-03-19, YBM넷 입사(전 회사 퇴사일 기준, 공백 거의 없음)
+    const CURRENT_START = new Date(2022, 2, 21); // 2022-03-21, YBM넷 입사
 
     function formatTenure(start, end) {
         let years = end.getFullYear() - start.getFullYear();
@@ -29,6 +29,36 @@
         const currentEl = document.getElementById("stat-current");
         if (totalEl) totalEl.textContent = formatTenure(CAREER_START, now);
         if (currentEl) currentEl.textContent = formatTenure(CURRENT_START, now);
+    }
+
+    /* ---------- ongoing period durations ("– 현재" / "– present") ---------- */
+    const ONGOING_RE = /^(\d{4})\.(\d{2})\s*[–-]\s*(현재|present)$/;
+
+    function formatMonths(total) {
+        if (total < 1) return "1개월 미만";
+        const years = Math.floor(total / 12);
+        const months = total % 12;
+        const parts = [];
+        if (years) parts.push(years + "년");
+        if (months) parts.push(months + "개월");
+        return parts.join(" ");
+    }
+
+    function renderOngoingPeriods() {
+        const now = new Date();
+        const nowIdx = now.getFullYear() * 12 + now.getMonth();
+        document
+            .querySelectorAll(".log-head time, .period")
+            .forEach(function (el) {
+                const m = ONGOING_RE.exec(el.textContent.trim());
+                if (!m) return;
+                const total = nowIdx - (Number(m[1]) * 12 + Number(m[2]) - 1);
+                if (total < 0) return; // 아직 시작 전
+                const span = document.createElement("span");
+                span.className = "period-elapsed";
+                span.textContent = " (" + formatMonths(total) + ")";
+                el.appendChild(span);
+            });
     }
 
     /* ---------- build date footer ---------- */
@@ -229,6 +259,7 @@
 
     document.addEventListener("DOMContentLoaded", function () {
         renderTenure();
+        renderOngoingPeriods();
         renderBuildDate();
         initCopyButton();
         initRepoToggles();
