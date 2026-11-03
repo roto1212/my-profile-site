@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex" />
+        <title>선대범 · 이력서</title>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css"
+        />
+        <link rel="stylesheet" href="print.css" />
+    </head>
+    <body>
+        <div class="toolbar no-print">
+            <a class="tb-link" href="index.html">← 사이트로</a>
+            <span class="tb-hint"
+                >인쇄 창에서 대상을 <b>PDF로 저장</b>, 용지 <b>A4</b>, 여백
+                <b>기본값</b>, <b>머리글 및 바닥글</b> 끄기를 권장합니다.</span
+            >
+            <button class="tb-btn" id="print-btn" type="button">
+                PDF로 저장
+            </button>
+        </div>
+
+        <main class="sheet" id="resume" aria-live="polite">
+            <p class="r-loading">이력서를 불러오는 중…</p>
+        </main>
+
+        <script type="module" src="js/print.js"></script>
+    </body>
+</html>

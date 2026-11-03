@@ -1,0 +1,443 @@
+{
+    "meta": {
+        "name": "선대범",
+        "roleFrom": "PHP 8 · Vanilla JS · MSSQL 풀스택 SI 5년",
+        "roleTo": "Python(FastAPI) · Vue.js 기반 R&D/AX 전환 중",
+        "email": "sdb8324@gmail.com",
+        "siteUrl": "https://roto1212.github.io/my-profile-site/",
+        "careerStart": "2021-02",
+        "currentStart": "2022-03-21"
+    },
+    "stats": [
+        { "cmd": "$ career --uptime", "type": "tenure", "from": "careerStart" },
+        { "cmd": "$ company --tenure", "type": "tenure", "from": "currentStart" },
+        {
+            "cmd": "$ commerce --processed",
+            "value": "12억원",
+            "note": "2025.01–2026.05 폐쇄몰 결제 처리액"
+        }
+    ],
+    "skills": [
+        {
+            "hunk": "backend",
+            "rows": [
+                { "status": "ctx", "name": "PHP 7 / 8", "level": 3, "note": "SI 5년 주력" },
+                {
+                    "status": "add",
+                    "name": "Python · FastAPI",
+                    "level": 2,
+                    "note": "R&D 전환 후 주력 전환 중"
+                },
+                {
+                    "status": "add",
+                    "name": "SQLAlchemy · Alembic",
+                    "level": 2,
+                    "note": "ORM · 마이그레이션"
+                },
+                {
+                    "status": "ctx",
+                    "name": "Firebase FCM",
+                    "level": 2,
+                    "note": "사이트 전 영역 푸시 통합 함수 구현"
+                },
+                {
+                    "status": "add",
+                    "name": "JWT 인증",
+                    "level": 2,
+                    "note": "회원가입 · 로그인 + 인증 의존성 기반 권한 체크"
+                }
+            ]
+        },
+        {
+            "hunk": "payments / external api",
+            "rows": [
+                {
+                    "status": "ctx",
+                    "name": "Stripe",
+                    "level": 2,
+                    "note": "전 직장 뷰티존 프로젝트, 미국 카드 결제 연동"
+                },
+                {
+                    "status": "ctx",
+                    "name": "Avalara",
+                    "level": 2,
+                    "note": "전 직장 뷰티존 프로젝트, 주 · 카운티별 판매세 자동계산 연동"
+                },
+                {
+                    "status": "ctx",
+                    "name": "Shippo",
+                    "level": 2,
+                    "note": "전 직장 뷰티존 프로젝트, 국제 배송 라벨 · 운임 연동"
+                }
+            ]
+        },
+        {
+            "hunk": "frontend",
+            "rows": [
+                {
+                    "status": "ctx",
+                    "name": "Vanilla JS",
+                    "level": 3,
+                    "note": "SI 5년 주력 · SPA 프레임워크가 추상화하는 DOM 로직을 먼저 체득하려는 선택 · 필요시 jQuery도 사용"
+                },
+                { "status": "ctx", "name": "Quill", "level": 2, "note": "업로드 통합 모듈 연동" },
+                { "status": "add", "name": "Vue.js", "level": 2, "note": "R&D 현재" },
+                { "status": "add", "name": "Tailwind CSS", "level": 2, "note": "R&D 현재" },
+                {
+                    "status": "rc",
+                    "name": "Svelte",
+                    "level": 1,
+                    "note": "Svelte 공식 튜토리얼 실습으로 SPA 라우팅 학습"
+                },
+                {
+                    "status": "rc",
+                    "name": "React · Next.js",
+                    "level": 1,
+                    "note": "인프런 등 학습 사이트로 꾸준히 학습 · 실무 사용 경험 없음(현 직장 미사용)",
+                    "courses": [
+                        {
+                            "label": "드림코딩 — Next.js 개념정리 및 클론코딩",
+                            "url": "https://academy.dream-coding.com/certificate?id=db0d5d71-1d6c-4d8c-bee8-30b9928b3e88&course=next"
+                        },
+                        {
+                            "label": "인프런 — 실무중심! FE 입문자를 위한 React",
+                            "url": "https://www.inflearn.com/certificate/1324971-331070-13903990"
+                        },
+                        {
+                            "label": "인프런 — [풀스택 완성] Supabase로 웹사이트 3개를 클론하기(Next.js 14)",
+                            "url": "https://www.inflearn.com/certificate/1324971-332907-13903991"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hunk": "database",
+            "rows": [
+                { "status": "ctx", "name": "MSSQL 2019", "level": 3, "note": "SI ~ 현재 지속" },
+                {
+                    "status": "ctx",
+                    "name": "MySQL",
+                    "level": 2,
+                    "note": "웹비즈크리에이티브 재직 중 프로젝트에서 사용"
+                }
+            ]
+        },
+        {
+            "hunk": "infra / tooling",
+            "rows": [
+                { "status": "ctx", "name": "Git", "level": 3, "note": "형상 관리" },
+                {
+                    "status": "add",
+                    "name": "Docker",
+                    "level": 2,
+                    "note": "WSL2 위 MSSQL 등 개발환경"
+                },
+                { "status": "add", "name": "uv · ruff", "level": 2, "note": "Python 패키지 · 린트" }
+            ]
+        },
+        {
+            "hunk": "ax / ai features",
+            "rows": [
+                {
+                    "status": "add",
+                    "name": "LLM Integration",
+                    "level": 2,
+                    "note": "기존 서비스에 AI 기능 부착"
+                },
+                {
+                    "status": "add",
+                    "name": "OWUI",
+                    "level": 2,
+                    "note": "사내 AI 챗봇(Open WebUI 기반) 개발 중"
+                },
+                {
+                    "status": "add",
+                    "name": "OpenRouter",
+                    "level": 2,
+                    "note": "멀티 LLM 연동 경로로 활용"
+                },
+                { "status": "rc", "name": "LangChain", "level": 0, "note": "학습 예정" },
+                { "status": "rc", "name": "LangGraph", "level": 0, "note": "학습 예정" }
+            ]
+        }
+    ],
+    "orgs": [
+        { "major": 2, "name": "YBM넷", "role": "웹개발 · IT RnD팀", "start": "2022-03", "end": "present" },
+        { "major": 1, "name": "웹비즈크리에이티브", "role": "SI 개발자", "start": "2021-02", "end": "2022-03" },
+        {
+            "major": 0,
+            "name": "코리아IT아카데미",
+            "role": "국비 교육과정 (경력 미포함)",
+            "start": "2020-07",
+            "end": "2020-12"
+        }
+    ],
+    "changelog": [
+        {
+            "ver": "v2.13.0",
+            "kind": "minor",
+            "status": "planned",
+            "start": "2026-08",
+            "end": "present",
+            "title": "OWUI RAG 지식베이스 — 설계 · 리서치",
+            "body": "사내 지식베이스 검색-증강 생성(RAG) 구조 설계를 검토하는 단계."
+        },
+        {
+            "ver": "v2.12.0",
+            "kind": "minor",
+            "status": "done",
+            "start": "2026-08",
+            "title": "admin-ui — 챗봇 관리자 페이지 신규 구축",
+            "body": "shadcn-svelte 디자인 시스템으로 전환, DataTable · FilterBar 공용화, vitest + Playwright 테스트 인프라 도입까지 단독 개발."
+        },
+        {
+            "ver": "v2.11.4",
+            "kind": "patch",
+            "status": "done",
+            "start": "2026-07",
+            "end": "2026-08",
+            "title": "계열사 로그인 게이트 — 인증 구조 개선"
+        },
+        {
+            "ver": "v2.11.3",
+            "kind": "patch",
+            "status": "done",
+            "start": "2026-07",
+            "title": "ai-tool-control 통합 · Alembic 스키마 이력관리 도입"
+        },
+        {
+            "ver": "v2.11.2",
+            "kind": "patch",
+            "status": "done",
+            "start": "2026-06",
+            "title": "ESLint · Prettier 공유 설정 패키지"
+        },
+        {
+            "ver": "v2.11.1",
+            "kind": "patch",
+            "status": "done",
+            "start": "2026-06",
+            "end": "2026-07",
+            "title": "ybm-dlp — 개인정보 비식별 필터 모듈"
+        },
+        {
+            "ver": "v2.11.0",
+            "kind": "minor",
+            "status": "rc",
+            "start": "2026-06",
+            "end": "present",
+            "title": "사내 AI 챗봇(Open WebUI) 구축 · 운영",
+            "body": "Python(FastAPI) 기반 사내 LLM 챗봇 플랫폼을 주 담당으로 구축 · 운영 중."
+        },
+        {
+            "ver": "v2.10.0",
+            "verHi": 1,
+            "kind": "minor",
+            "jump": true,
+            "status": "done",
+            "start": "2026-05",
+            "end": "present",
+            "note": "minor 자릿수 점프 — 개발팀 → IT RnD팀 이동",
+            "title": "IT RnD팀 합류 — AX 전환",
+            "body": "개발팀에서 IT RnD팀으로 이동, Python(FastAPI) + Vue.js/Svelte 기반 AX(AI 기능 부착) 개발로 전환."
+        },
+        {
+            "ver": "v2.2.1",
+            "kind": "patch",
+            "status": "done",
+            "title": "입학원서 등 서류 버전관리 기능 확장"
+        },
+        {
+            "ver": "v2.2.0",
+            "kind": "minor",
+            "status": "done",
+            "start": "2025-05",
+            "end": "2026-05",
+            "title": "폐쇄몰 pine square — 재고~반품/교환 신규 구축",
+            "body": "재고 · 발주 · 판매 · 결제 · 반품 · 환불 · 교환(부분반품 · 부분교환 · 세트상품 부분교환 포함)까지 FE · BE · DB 단독 구축. 처리 매출 약 12억원(2025.01–2026.05)."
+        },
+        {
+            "ver": "v2.1.0",
+            "kind": "minor",
+            "status": "done",
+            "start": "2023-04",
+            "end": "2025-05",
+            "title": "원아관리 플랫폼 — 메인 개발 · 공통 모듈화",
+            "body": "파일 업로드 · 푸시 알림을 단일 모듈로 통합한 SaaS 메인 플랫폼 개발. 첫 커밋 2023-04-27."
+        },
+        {
+            "ver": "v2.0.3",
+            "kind": "patch",
+            "status": "done",
+            "title": "ybm books — VOCA 출제 마법사"
+        },
+        {
+            "ver": "v2.0.2",
+            "kind": "patch",
+            "status": "done",
+            "title": "ybm academy — Java → PHP 마이그레이션"
+        },
+        {
+            "ver": "v2.0.1",
+            "kind": "patch",
+            "status": "done",
+            "title": "ybm pine GT — 결제 · 예약 페이지"
+        },
+        {
+            "ver": "v2.0.0",
+            "kind": "major",
+            "status": "done",
+            "start": "2022-03",
+            "title": "YBM넷 입사 — 웹개발",
+            "body": "전 직장 웹비즈크리에이티브 퇴사 직후 입사, 웹개발 담당으로 시작."
+        },
+        {
+            "ver": "v1.3.1",
+            "kind": "patch",
+            "status": "done",
+            "title": "더부천 · PPI · H-seven · 셀러뷰 — 유지보수 및 게시판 구축"
+        },
+        {
+            "ver": "v1.3.0",
+            "kind": "minor",
+            "status": "done",
+            "start": "2021-11",
+            "end": "2022-03",
+            "title": "뷰티존 — 미국 현지 입점몰",
+            "body": "메인 개발자로 Stripe 카드결제 · Avalara 판매세 · Shippo 배송 API 연동, 셀러 정산 · 포인트 · 기프트카드 · 쿠폰 로직 구현."
+        },
+        {
+            "ver": "v1.2.0",
+            "kind": "minor",
+            "status": "done",
+            "start": "2021-08",
+            "end": "2021-11",
+            "title": "워커몬 — 구인구직 · 근태관리 플랫폼",
+            "body": "일용직 구인구직 · 근로계약 · 근태관리 플랫폼을 메인 개발자로 신규 구축."
+        },
+        {
+            "ver": "v1.1.0",
+            "kind": "minor",
+            "status": "done",
+            "start": "2021-05",
+            "end": "2021-08",
+            "title": "공임나라 — 고도몰류 쇼핑몰 PHP · MySQL 마이그레이션",
+            "body": "상용 쇼핑몰 솔루션 기반 사이트가 기능 추가로 느려져 이관받은 프로젝트. PHP 전환은 대부분 완료된 상태로 인수해 버그 수정을 담당했고, MSSQL 스키마를 덤프받아 MySQL 스키마로 직접 재작성한 뒤 PHP 매핑 코드로 데이터를 이관하는 DB 마이그레이션을 주도."
+        },
+        {
+            "ver": "v1.0.2",
+            "kind": "patch",
+            "status": "done",
+            "title": "유토빌 — 아파트 관리사무소 게시판 신규 구축"
+        },
+        {
+            "ver": "v1.0.1",
+            "kind": "patch",
+            "status": "done",
+            "title": "IPTV협회 — Java/Spring 레거시 유지보수"
+        },
+        {
+            "ver": "v1.0.0",
+            "kind": "major",
+            "status": "done",
+            "start": "2021-02",
+            "title": "웹비즈크리에이티브 입사 — SI 개발자",
+            "body": "PHP · Vanilla JS 중심 SI 개발로 커리어 시작. Java/Spring 유지보수로 입사해 이후 PHP 개발팀으로 배치."
+        },
+        {
+            "ver": "v0.1.0",
+            "kind": "major",
+            "status": "done",
+            "start": "2020-07",
+            "end": "2020-12",
+            "title": "코리아IT아카데미 — Java 프레임웍기반 풀스텍 양성C",
+            "body": "6개월 국비과정으로 Java 풀스택 개발 기초를 다짐."
+        }
+    ],
+    "projects": [
+        {
+            "repo": "care-platform-commerce",
+            "status": "done",
+            "desc": "원아관리 SaaS 플랫폼 — 파일·푸시 공통 모듈화 및 폐쇄몰 커머스(재고~반품/교환) 풀스택 단독 구축",
+            "tech": ["PHP 7/8", "Vanilla JS", "MSSQL", "Firebase FCM", "Quill"],
+            "start": "2023-04",
+            "end": "2026-05",
+            "star": {
+                "s": "파일 업로드·푸시 알림 코드가 화면마다 중복 구현되어 유지보수 비용이 컸고, 교복 등 물품을 파는 폐쇄몰이 신규로 필요했다.",
+                "t": "업로드·푸시를 재사용 가능한 단일 모듈로 통합하고, 재고~반품/교환까지 커머스 전 흐름을 혼자 FE·BE·DB로 구현한다. 특히 부분반품·부분교환·세트상품 부분교환까지 정합성 있게 처리한다.",
+                "a": "파일 업로드·Quill 이미지 업로드를 하나의 모듈로 일원화. Firebase 기반 통합 푸시 함수로 사이트 내 모든 알림을 단일 함수로 처리. 재고·발주·판매·결제·반품·환불·교환·부분반품/부분교환·세트상품 부분교환을 전 계층 단독 구현.",
+                "r": "알림·업로드를 단일 경로로 일원화해 중복 제거. 폐쇄몰 커머스(pine square)를 단독으로 FE·BE·DB까지 오픈, 약 3년간(메인 개발 2023.04–2025.05 + 유지보수·확장 2025.05–2026.05) 대부분 기능을 단독 구현·운영. 2025.01–2026.05 처리 매출 약 12억원."
+            }
+        },
+        {
+            "repo": "jumpto-fastapi-paibo",
+            "status": "done",
+            "desc": "점프 투 FastAPI 튜토리얼 — Q&A 게시판(파이보) 백엔드~프론트 엔드투엔드 구현",
+            "tech": ["FastAPI", "SQLAlchemy", "Alembic", "Pydantic", "JWT", "Svelte", "SQLite"],
+            "start": "2026-07",
+            "star": {
+                "s": "PHP 8 + Vanilla JS + MSSQL SI 5년 경력에서 2026-05-21부로 R&D팀(Python FastAPI + Vue.js) 전환.",
+                "t": "FastAPI 백엔드(라우터/스키마/CRUD)와 ORM(SQLAlchemy+Alembic), SPA 프론트 연동 방식을 검증된 튜토리얼로 빠르게 체득한다.",
+                "a": "도메인 단위(question/answer/user)로 라우터·Pydantic 스키마·CRUD를 3계층 분리. SQLAlchemy+Alembic으로 테이블·FK 구성, relationship으로 답변 중첩 직렬화. JWT 회원가입·로그인과 권한 체크, 추천·마크다운 렌더링·검색을 구현하고 Svelte 정적 빌드를 FastAPI가 직접 서빙하도록 구성.",
+                "r": "FastAPI 백엔드(인증·권한 포함)와 Svelte 프론트가 맞물려 동작하는 게시판을 엔드투엔드로 완성, 튜토리얼 1~4장을 3일 만에 완주. 실무 R&D 프로젝트에 바로 옮길 수 있는 패턴 확보."
+            }
+        },
+        {
+            "repo": "obsidian-career-automation",
+            "status": "active",
+            "desc": "Obsidian 기반 작업일지 · 포트폴리오 자동화 시스템 — work-log / career-log Claude Code 커스텀 스킬 설계",
+            "tech": ["Claude Code", "Obsidian", "Dataview", "Markdown"],
+            "start": "2026-06",
+            "end": "present",
+            "star": {
+                "s": "SI 5년 → R&D 전환 직후, 새로 배우는 양은 많지만 기록이 휘발돼 회고·커리어 정리 시 근거가 부족했다.",
+                "t": "작업이 끝나면 최소 노력으로 일지·포트폴리오·성과 근거가 동시에 쌓이는 파이프라인을 만든다.",
+                "a": "Claude Code 커스텀 스킬 2종(work-log, career-log) 설계. Obsidian vault에 60_Career 체계(프로젝트 케이스·정량 성과·기술 스택 인벤토리)를 구성하고 Dataview로 상호 집계.",
+                "r": "일지 → 포트폴리오 → 경력기술서가 단일 출처(Dataview)로 연결돼 이중 관리 제거. 작업일지 작성 시간을 수작업 대비 대폭 단축."
+            }
+        },
+        {
+            "repo": "workermon-job-platform",
+            "status": "done",
+            "desc": "워커몬 — 일용직 구인구직 · 근로계약 · 근태관리 플랫폼 신규 구축 (메인 개발자)",
+            "tech": ["PHP", "Vanilla JS", "jQuery", "MySQL"],
+            "start": "2021-08",
+            "end": "2021-11",
+            "star": {
+                "s": "클라이언트가 일용직 구인구직 시장을 겨냥한 신규 플랫폼을 의뢰. 매칭·근로계약·근태 기록이 분리된 수기·개별 도구로 처리되고 있었다.",
+                "t": "메인 개발자로서 구인공고 등록·매칭부터 근로계약 체결, 근태 기록까지 하나의 플랫폼에서 처리되도록 신규 구축한다.",
+                "a": "화면 기획·요구사항 분석부터 PHP+MySQL 백엔드, Vanilla JS+jQuery+Ajax 프론트까지 메인 개발자로 설계·구현. 구인공고 등록/검색, 지원·매칭, 근로계약서 작성·체결, 출퇴근 기반 근태관리 기능을 구현.",
+                "r": "약 3.5개월 만에 신규 플랫폼을 오픈해 클라이언트에 납품 완료."
+            }
+        },
+        {
+            "repo": "beautyzone-us-marketplace",
+            "status": "done",
+            "desc": "뷰티존 — 미국 현지 입점몰, 해외 결제·세금·배송 API 연동 (메인 개발자)",
+            "tech": ["PHP", "Vanilla JS", "MySQL", "Stripe", "Avalara", "Shippo"],
+            "start": "2021-11",
+            "end": "2022-03",
+            "star": {
+                "s": "클라이언트가 미국 현지에서 운영될 멀티벤더 입점몰을 의뢰. 국내 커머스와 달리 미국 카드결제, 주/카운티별 판매세, 국제 배송까지 함께 처리해야 했다.",
+                "t": "메인 개발자로서 상품 등록/판매, 입찰 판매, 셀러 관리, 미국 전용 결제·세금·배송 처리를 하나의 플랫폼으로 신규 구축한다.",
+                "a": "PHP+MySQL 백엔드, Vanilla JS 프론트로 입점몰 전체 흐름을 메인 개발자로 구현. Stripe로 미국 카드결제, Avalara로 주/카운티별 판매세 자동계산, Shippo로 배송 라벨·운임을 연동. 셀러 정산·포인트·기프트카드·쿠폰 로직을 구현.",
+                "r": "재직 기간 동안 입점몰 플랫폼 핵심 기능(판매, 셀러 관리, 결제·세금·배송 연동, 정산)을 메인 개발자로 구축 완료."
+            }
+        },
+        {
+            "repo": "gongimnara-db-migration",
+            "status": "done",
+            "desc": "공임나라 — 고도몰류 쇼핑몰 솔루션 이관, MSSQL→MySQL DB 마이그레이션 주도",
+            "tech": ["PHP", "MSSQL", "MySQL"],
+            "start": "2021-05",
+            "end": "2021-08",
+            "star": {
+                "s": "고도몰류 상용 쇼핑몰 솔루션 위에 기능을 계속 추가하다 사이트가 느려진 클라이언트가 커스텀 PHP로 재구축하는 프로젝트를 의뢰, 회사가 이를 이관받았다. 기존 DB는 MSSQL이었고 재구축 과정에서 MySQL로 전환하기로 했다.",
+                "t": "PHP 마이그레이션은 대부분 완료된 상태로 인수해 잔존 버그를 수정하고, MSSQL에 있던 스키마·데이터를 MySQL로 마이그레이션한다.",
+                "a": "기존 MSSQL 스키마를 덤프받아 테이블·컬럼·타입을 하나씩 확인하며 MySQL 스키마로 직접 재작성. 재작성한 스키마에 맞춰 PHP로 데이터 매핑(ETL) 코드를 작성해 MSSQL→ MySQL 데이터 이관을 수행. 인수받은 PHP 코드베이스의 잔존 버그를 수정.",
+                "r": "약 3개월 만에 DB 마이그레이션과 잔존 버그 수정을 마치고 신규 사이트로 전환 완료."
+            }
+        }
+    ]
+}

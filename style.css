@@ -884,3 +884,54 @@ footer.contact {
     opacity: 0.7;
     white-space: nowrap;
 }
+
+/* ---------- pdf button (topbar) ---------- */
+.pdf-btn {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--paper);
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    border-radius: var(--radius);
+    padding: 0.25rem 0.65rem;
+    transition: opacity 0.15s ease;
+}
+.pdf-btn:hover {
+    opacity: 0.85;
+}
+
+.load-error {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--rc);
+    background: var(--rc-bg);
+    border-radius: var(--radius);
+}
+
+/* ---------- print: 이 페이지를 직접 인쇄하는 경우의 최소 보정 ----------
+   A4 이력서 레이아웃은 print.html (상단바 "pdf ↓" 버튼) 이 담당한다. */
+@media print {
+    body {
+        background: #fff;
+    }
+    .topbar,
+    .skip-link,
+    #copy-btn {
+        display: none;
+    }
+    .repo-star[hidden] {
+        display: block;
+    }
+    .log-entry,
+    .repo-card {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    .repo-card,
+    .log-entry,
+    .diff-row {
+        break-inside: avoid;
+    }
+}
